@@ -1,0 +1,460 @@
+{
+	"info": {
+		"_postman_id": "146d7460-f6d2-44f5-a76a-76f980e6e57d",
+		"name": "GeoApiDoc",
+		"description": "Geolocation Api\n\n-Register\n-Login\n-UserDetails \n-Distance Calculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register Api User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Email\" :\"Example2@gmail.com\",\n\t\"Password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:20926/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20926",
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "User be able to register with email and password"
+			},
+			"response": [
+				{
+					"name": "Register Api User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Email\" :\"Example2@gmail.com\",\n\t\"Password\":\"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20926/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20926",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RjpcUHJvamVjdE5ld1xHZW9BcHBBcGlcR2VvQXBpXGFwaVxyZWdpc3Rlcg==?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 17 Dec 2019 04:56:41 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "Account created"
+				}
+			]
+		},
+		{
+			"name": "Login Api User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"UserName\" :\"Example2@gmail.com\",\n\t\"Password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:20926/api/Auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20926",
+					"path": [
+						"api",
+						"Auth",
+						"login"
+					]
+				},
+				"description": "Login User With UserNane(Email) & Passwoed  And get Token For Access To Other Link"
+			},
+			"response": [
+				{
+					"name": "Login Api User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"UserName\" :\"Example2@gmail.com\" ,\n\"Password\" : \"123456\",\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20926/api/Auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20926",
+							"path": [
+								"api",
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RjpcUHJvamVjdE5ld1xHZW9BcHBBcGlcR2VvQXBpXGFwaVxBdXRoXGxvZ2lu?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 17 Dec 2019 05:13:37 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n  \"id\": \"2559f9fa-3eb5-4a67-a5b5-e1a73e75f17d\",\r\n  \"auth_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFeGFtcGxlMkBnbWFpbC5jb20iLCJqdGkiOiIxYzlkZDc5MC02MThjLTQ4MzUtODhiZS1lNjM2YWYyMmRlYzEiLCJpYXQiOjE1NzY1NTk2MTgsInJvbCI6ImFwaV9hY2Nlc3MiLCJpZCI6IjI1NTlmOWZhLTNlYjUtNGE2Ny1hNWI1LWUxYTczZTc1ZjE3ZCIsIm5iZiI6MTU3NjU1OTYxNywiZXhwIjoxNTc2NTY2ODE3LCJpc3MiOiJ3ZWJBcGkiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjUwMDAvIn0.g1Vt1XEPqtIqjQZqIlz66lG1OTSnVw5g0Q304g6a2To\",\r\n  \"expires_in\": 7200\r\n}"
+				}
+			]
+		},
+		{
+			"name": "UserPanle ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFeGFtcGxlMkBnbWFpbC5jb20iLCJqdGkiOiIxYzlkZDc5MC02MThjLTQ4MzUtODhiZS1lNjM2YWYyMmRlYzEiLCJpYXQiOjE1NzY1NTk2MTgsInJvbCI6ImFwaV9hY2Nlc3MiLCJpZCI6IjI1NTlmOWZhLTNlYjUtNGE2Ny1hNWI1LWUxYTczZTc1ZjE3ZCIsIm5iZiI6MTU3NjU1OTYxNywiZXhwIjoxNTc2NTY2ODE3LCJpc3MiOiJ3ZWJBcGkiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjUwMDAvIn0.g1Vt1XEPqtIqjQZqIlz66lG1OTSnVw5g0Q304g6a2To",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:20926/api/UserPanel/Home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20926",
+					"path": [
+						"api",
+						"UserPanel",
+						"Home"
+					]
+				},
+				"description": "User Panel .\n-Access user to panel after login.\n-See geolocations and UserName and Id"
+			},
+			"response": [
+				{
+					"name": "UserPanle ",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20926/api/UserPanel/Home",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20926",
+							"path": [
+								"api",
+								"UserPanel",
+								"Home"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RjpcUHJvamVjdE5ld1xHZW9BcHBBcGlcR2VvQXBpXGFwaVxVc2VyUGFuZWxcSG9tZQ==?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 17 Dec 2019 06:14:25 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"username\": \"Example2@gmail.com\",\n        \"lat1\": 200,\n        \"lat2\": 25,\n        \"long1\": 100,\n        \"long2\": 2,\n        \"distance\": 10173.316945991119\n    },\n    {\n        \"username\": \"Example2@gmail.com\",\n        \"lat1\": 500,\n        \"lat2\": 25,\n        \"long1\": 100,\n        \"long2\": 2,\n        \"distance\": 7604.6830368929241\n    },\n    {\n        \"username\": \"Example2@gmail.com\",\n        \"lat1\": 500,\n        \"lat2\": 25,\n        \"long1\": 100,\n        \"long2\": 2,\n        \"distance\": 7604.6830368929241\n    },\n    {\n        \"username\": \"Example2@gmail.com\",\n        \"lat1\": 200,\n        \"lat2\": 4000,\n        \"long1\": 100,\n        \"long2\": 2,\n        \"distance\": 10771.748059474601\n    },\n    {\n        \"username\": \"Example2@gmail.com\",\n        \"lat1\": 200,\n        \"lat2\": 4000,\n        \"long1\": 100,\n        \"long2\": 12,\n        \"distance\": 11584.284919063497\n    },\n    {\n        \"username\": \"Example2@gmail.com\",\n        \"lat1\": 500,\n        \"lat2\": 25,\n        \"long1\": 100,\n        \"long2\": 2,\n        \"distance\": 7604.6830368929241\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "DistanceCalculator",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFeGFtcGxlMkBnbWFpbC5jb20iLCJqdGkiOiIxYzlkZDc5MC02MThjLTQ4MzUtODhiZS1lNjM2YWYyMmRlYzEiLCJpYXQiOjE1NzY1NTk2MTgsInJvbCI6ImFwaV9hY2Nlc3MiLCJpZCI6IjI1NTlmOWZhLTNlYjUtNGE2Ny1hNWI1LWUxYTczZTc1ZjE3ZCIsIm5iZiI6MTU3NjU1OTYxNywiZXhwIjoxNTc2NTY2ODE3LCJpc3MiOiJ3ZWJBcGkiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjUwMDAvIn0.g1Vt1XEPqtIqjQZqIlz66lG1OTSnVw5g0Q304g6a2To",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FirstLong\" : \"100\",\n    \"FirstLat\" :\"500\",\n    \"SecLat\" :\"25\",\n    \"SecLong\" :\"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:20926/api/UserPanel/Distance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20926",
+					"path": [
+						"api",
+						"UserPanel",
+						"Distance"
+					]
+				},
+				"description": "Calculates the geographical distance between two points"
+			},
+			"response": [
+				{
+					"name": "DistanceCalculator",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"FirstLong\" : \"100\",\n    \"FirstLat\" :\"500\",\n    \"SecLat\" :\"25\",\n    \"SecLong\" :\"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20926/api/UserPanel/Distance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20926",
+							"path": [
+								"api",
+								"UserPanel",
+								"Distance"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RjpcUHJvamVjdE5ld1xHZW9BcHBBcGlcR2VvQXBpXGFwaVxVc2VyUGFuZWxcRGlzdGFuY2U=?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 17 Dec 2019 05:21:24 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Distance between Two Location : 7604.68303689292 Km\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJNb3N0YWZhQGdtYWlsLmNvbSIsImp0aSI6IjBmYjc3ZmExLWRkZTUtNGI1Zi04OTZiLTBhMDZmNTY0YjBiNiIsImlhdCI6MTU3NjUxOTQ2OCwicm9sIjoiYXBpX2FjY2VzcyIsImlkIjoiYTEzMmE1YjQtNWNkNS00NjI5LWIwZjYtMDk0MGMzYzYzMjkxIiwibmJmIjoxNTc2NTE5NDY3LCJleHAiOjE1NzY1MjY2NjcsImlzcyI6IndlYkFwaSIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MjA5MjYvIn0.A7q0a12Bfd1IWG2tnmb3l2yCTGCCA6cOWs6GhIUJ7GA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d2d3b889-8e85-4c8a-9f9d-988b934d0009",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "024da40c-14de-47e6-ac03-90e9142ed3a8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
